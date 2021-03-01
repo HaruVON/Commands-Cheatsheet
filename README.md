@@ -38,3 +38,6 @@ For things named <something>.service, you can actually just use <something>, as 
 '''
 journalctl -u service-name
 '''
+
+'''
+journalctl -u swag -n 100 --no-pager
