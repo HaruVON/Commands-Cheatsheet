@@ -49,5 +49,5 @@ grep -rnw <dir> -e 'pattern'
 '''
   
 '''
-find file
+find [where to start searching from] [expression determines what to find] [-options] [what to find]
 '''
