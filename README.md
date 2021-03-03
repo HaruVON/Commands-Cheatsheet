@@ -50,6 +50,7 @@ grep -rnw <dir> -e 'pattern'
   
 ```
 find [where to start searching from] [expression determines what to find] [-options] [what to find]
+fine <dir to search from> -name:option for file name 'pattern'
 ```
 
 ## Change ownership of files
