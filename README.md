@@ -41,3 +41,13 @@ journalctl -u service-name
 
 '''
 journalctl -u swag -n 100 --no-pager
+'''
+
+
+'''
+grep -rnw <dir> -e 'pattern'
+'''
+  
+'''
+find file
+'''
