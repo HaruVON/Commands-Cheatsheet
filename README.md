@@ -51,3 +51,10 @@ grep -rnw <dir> -e 'pattern'
 ```
 find [where to start searching from] [expression determines what to find] [-options] [what to find]
 ```
+
+## Change ownership of files
+
+```
+sudo chown -R user:group <dir>
+```
+-R - recursive
