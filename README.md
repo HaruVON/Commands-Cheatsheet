@@ -10,8 +10,25 @@ sudo mount -t cifs -o username=swiftd.adm //<server name>/<dir> <path to dir to 
 ## IP Reset via DNS
 
 ```
+if sudo grep -q /etc/dhcp/dhclient.conf -e 'inerface "ens160" {\n\tsend host-name = gethostname();\n\tsend dhcp-requested-address 192.168.10.101;\n}';
+then
+  sudo dhclient -r -v && sudo dhclient -4 -d -v -cf /etc/dhcp/dhclient.conf ens16- && sudo reboot;
+else
+  sudo echo 'inerface "ens160" {\n\tsend host-name = gethostname();\n\tsend dhcp-requested-address 192.168.10.101;\n}' >> /etc/dhcp/dhclient.conf;
+  sudo dhclient -r -v && sudo dhclient -4 -d -v -cf /etc/dhcp/dhclient.conf ens16- && sudo reboot;
+fi
+``` 
+
+or 
 
 ```
+if ! sudo grep -q /etc/dhcp/dhclient.conf -e 'inerface "ens160" {\n\tsend host-name = gethostname();\n\tsend dhcp-requested-address 192.168.10.101;\n}';
+then
+  sudo echo 'inerface "ens160" {\n\tsend host-name = gethostname();\n\tsend dhcp-requested-address 192.168.10.101;\n}' >> /etc/dhcp/dhclient.conf;
+fi
+
+sudo dhclient -r -v && sudo dhclient -4 -d -v -cf /etc/dhcp/dhclient.conf ens16- && sudo reboot;
+``` 
 
 ## Check Systemd Services
 
