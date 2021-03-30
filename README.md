@@ -76,3 +76,10 @@ fine <dir to search from> -name:option for file name 'pattern'
 sudo chown -R user:group <dir>
 ```
 -R - recursive
+
+# Documentation
+
+## Ansible
+
+### Vars
+- https://docs.ansible.com/ansible/latest/user_guide/intro_inventory.html
