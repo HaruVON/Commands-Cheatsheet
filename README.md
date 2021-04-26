@@ -30,7 +30,15 @@ fi
 sudo dhclient -r -v && sudo dhclient -4 -d -v -cf /etc/dhcp/dhclient.conf ens16- && sudo reboot;
 ``` 
 
-## Check Systemd Services
+## Systemd Services
+
+systemctl commands:
+
+- **enable**: enables on boot
+- **status**: gets status
+- **restart**
+- **start**
+- **reload**
 
 ```
 journalctl -u service-name.service
