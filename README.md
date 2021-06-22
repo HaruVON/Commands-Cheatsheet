@@ -91,3 +91,8 @@ sudo chown -R user:group <dir>
 
 ### Vars
 - https://docs.ansible.com/ansible/latest/user_guide/intro_inventory.html
+  
+## OSCAP
+  
+### Link
+- https://community.tenable.com/s/question/0D5f200006Ec9SGCAZ/disa-stig-against-centos
