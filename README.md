@@ -96,3 +96,13 @@ sudo chown -R user:group <dir>
   
 ### Link
 - https://community.tenable.com/s/question/0D5f200006Ec9SGCAZ/disa-stig-against-centos
+
+## Python
+
+  `
+  import re
+  with open("U_CAN_Ubuntu_20-04_LTS_STIG_V1R1_Manual-xccdf.xml") as fin, open('output', 'w') as fout:
+    for line in fin:
+      matches = re.findall('idref=\"V-\d\d\d\d\d\d', line)
+      fout.writelines(match + '\n' for match in matches)
+  `
