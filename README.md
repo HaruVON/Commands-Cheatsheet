@@ -68,6 +68,8 @@ journalctl -u service-name
 journalctl -u swag -n 100 --no-pager
 ```
 
+## Just CLI Stuffs  
+
 Run a command in the background and disown
 ```
 ctrl-z
@@ -81,7 +83,8 @@ grep -rnw <dir> -e 'pattern'
   
 ```
 find [where to start searching from] [expression determines what to find] [-options] [what to find]
-fine <dir to search from> -name:option for file name 'pattern'
+find <dir to search from> -name:option for file name 'pattern'
+find ./ -name 'example.txt'
 ```
 
 ## Change ownership of files
