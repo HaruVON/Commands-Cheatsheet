@@ -68,7 +68,13 @@ journalctl -u service-name
 journalctl -u swag -n 100 --no-pager
 ```
 
-
+Run a command in the background and disown
+```
+ctrl-z
+bg
+disown
+```
+  
 ```
 grep -rnw <dir> -e 'pattern'
 ```
