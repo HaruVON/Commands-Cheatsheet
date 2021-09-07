@@ -15,6 +15,7 @@ sudo mount -t cifs -o username=swiftd.adm //<server name>/<dir> <path to dir to 
 nmcli con add con-name "static-ens32" ifname ens32 type ethernet ip4 xxx.xxx.120.44/24 gw4 xxx.xxx.120.1
 nmcli con mod "static-ens32" ipv4.dns "xxx.xxx.120.1,8.8.8.8"
 nmcli con up "static-ens32" iface ens32
+nmcli con show
 nmcli con del ens32
 ```
 
