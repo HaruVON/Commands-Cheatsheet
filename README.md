@@ -7,7 +7,18 @@ List of commands that I often use
 sudo mount -t cifs -o username=swiftd.adm //<server name>/<dir> <path to dir to mount>
 ```
   
-## IP Reset via DNS
+## Networking
+
+### Networking with RHEL
+
+```
+nmcli con add con-name "static-ens32" ifname ens32 type ethernet ip4 xxx.xxx.120.44/24 gw4 xxx.xxx.120.1
+nmcli con mod "static-ens32" ipv4.dns "xxx.xxx.120.1,8.8.8.8"
+nmcli con up "static-ens32" iface ens32
+nmcli con del ens32
+```
+
+### IP Reset via DNS
 
 ```
 if sudo grep -q /etc/dhcp/dhclient.conf -e 'inerface "ens160" {\n\tsend host-name = gethostname();\n\tsend dhcp-requested-address 192.168.10.101;\n}';
