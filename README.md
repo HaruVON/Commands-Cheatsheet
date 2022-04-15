@@ -1,6 +1,12 @@
 # Commands-Cheatsheet
 List of commands that I often use
 
+## Get Full Path of Script
+
+```bash
+path=$(dirname "$(readlink -f "$0")")
+```
+
 ## SMB Mount
 
 ```
