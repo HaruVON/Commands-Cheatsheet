@@ -133,3 +133,17 @@ sudo chown -R user:group <dir>
       matches = re.findall('idref=\"V-\d\d\d\d\d\d', line)
       fout.writelines(match + '\n' for match in matches)
   ```
+
+## SSH
+  
+### Generate SSH key
+  
+  ```bash
+  ssh-keygen -b 4096
+  ```
+  
+### View SSH Key Size
+  
+  ```bash
+  ssh-keygen -lf <path_to_public_key_file>
+  ```
