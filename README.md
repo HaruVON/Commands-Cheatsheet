@@ -1,6 +1,13 @@
 # Commands-Cheatsheet
 List of commands that I often use
 
+## Rsync
+
+Compare two direcrtories (ie. a local directory to a remote directory). Empty means the second directory arg has all of the first directory files
+```bash
+rsync -avz --dry-run -e "ssh -p <port>" <source_dir> <dest_dir>
+```
+
 ## Get Full Path of Script
 
 ```bash
