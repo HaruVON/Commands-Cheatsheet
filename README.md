@@ -1,6 +1,13 @@
 # Commands-Cheatsheet
 List of commands that I often use
 
+## SSH
+
+Run a command on the remote server
+```bash
+ssh -p 10022 <server_ip>:<port> -t "ls -1 <path>"
+```
+
 ## Rsync
 
 Compare two direcrtories (ie. a local directory to a remote directory). Empty means the second directory arg has all of the first directory files
